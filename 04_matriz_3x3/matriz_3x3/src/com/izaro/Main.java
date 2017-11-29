@@ -12,24 +12,21 @@ public class Main {
         int[][] matriz = new int[3][3];
 
         for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[0].length; j++) {
-                System.out.println("Escribe los números que quieres mostrar en la matriz: ");
-                int respuesta = Integer.parseInt(br.readLine());
-                matriz[i][j] =respuesta;
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.println("Escribe los números para meterlos en la matriz:");
+                matriz[i][j] = Integer.parseInt(br.readLine());
 
             }
 
         }
-
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[0].length; j++) {
-                System.out.format("%d ", matriz[i][j]);
-
+        for (int j = 0; j < matriz.length; j++) {
+            for (int k = 0; k < matriz[j].length; k++) {
+                System.out.format("%4d", matriz[j][k]);
             }
-
             System.out.println();
 
         }
+
 
     }
 }
